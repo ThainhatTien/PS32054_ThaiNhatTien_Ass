@@ -1,0 +1,27 @@
+<div class="card text-start m-2 bg-primary-subtle">
+  <div class="card-header fs-4 fw-bold">
+    Đăng Nhập
+  </div>
+  <div class="card-body">
+    <form class="fst-italic m-3" name="frmdn">
+    <div class="mb-3">
+      <label for="username" class="form-label">Tài khoản</label>
+      <input type="text" class="form-control" id="username" ng-model="u" required name="username">
+      <em class="text-danger" ng-show="frmdn.username.$invalid">Chưa nhập tên đăng nhập</em>
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Mật khẩu</label>
+      <input type="password" class="form-control" id="password" ng-model="p" required name="password">
+      <em class="text-danger" ng-show="frmdn.password.$invalid">Chưa nhập mật khẩu</em>
+    </div>
+    <div class="mb-3 form-check m-1">
+      <input type="checkbox" class="form-check-input" id="remeberMe">
+      <label class="form-check-label" for="exampleCheck1">Lưu tài khoản</label>
+    </div>
+    
+  </form>
+  </div>
+  <div class="card-footer text-body-secondary">
+    <button type="button" class="btn btn-primary m-2" ng-click="dangnhap()">Đăng Nhập</button>
+  </div>
+</div>

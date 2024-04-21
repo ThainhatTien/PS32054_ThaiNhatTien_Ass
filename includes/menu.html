@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-info ">
+    <div class="container-fluid">
+        <a class="navbar-brand text-danger " href="#">FPT Polytechnic</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#!gioithieu"><i
+                            class="bi bi-exclamation-circle"></i> Giới thiệu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!lienhe"><i class="bi bi-telephone"></i> Liên hệ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!gopy"><i class="bi bi-envelope"></i> Góp ý</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!hoidap"><i class="bi bi-chat-dots"></i> Hỏi đáp</a>
+                </li>
+            </ul>
+
+        </div>
+        <li class="nav-link dropdown text-end ">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false"> <i class="bi bi-person-circle"></i>
+                <span ng-show="username==null">Tài khoản</span>
+                
+                <span ng-show="username!=null">{{username}}</span>
+            </a>
+            <ul class="dropdown-menu bg-info" aria-labelledby="navbarDropdown ">
+                <li><a class="dropdown-item fw-bold" href="#!dangky" ng-hide="username!=null"><i class="bi bi-person-plus"></i>
+                        Đăng ký</a>
+                </li>
+                <li><a class="dropdown-item fw-bold" href="#!dangnhap"><i class="bi bi-box-arrow-right"></i>
+                        Đăng
+                        nhập</a>
+                </li>
+                <li>
+                <li><a class="dropdown-item fw-bold" href="#!quenmatkhau"><i class="bi bi-shield"></i> Quên
+                        mật khẩu</a>
+                </li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item fw-bold" ng-click="thoat()" href="#"><i class="bi bi-box-arrow-left"></i> Đăng
+                        xuất</a></li>
+                <li><a class="dropdown-item fw-bold" href="#!doimatkhau"><i class="bi bi-repeat"></i> Đổi
+                        mật khẩu</a>
+                </li>
+                <li><a class="dropdown-item fw-bold" href="#!capnhatthongtin"><i class="bi bi-person-gear"></i> Cập nhật tài
+                        khoản</a>
+                </li>
+            </ul>
+        </li>
+    </div>
+
+</nav>

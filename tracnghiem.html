@@ -1,0 +1,27 @@
+<div class="card m-4 bg-primary-subtle">
+    <div class="card-header fs-5 fw-bold">{{tenMH}}</div>
+    <div class="card-body fst-italic">
+        <div class="m-3" ng-repeat="ch in caccauhoi | limitTo:pageSize:start">
+            <p>Câu hỏi : {{ch.Text}}
+                <span class="badge rounded-pill text-bg-primary px-3 py-1 float-end d-inline">
+                    <i class="bi bi-clock-fill"></i> {{sogiay}}
+                </span>
+            </p>
+
+            <div class="form-check" ng-repeat="p in ch.Answers">
+                <input type="radio" name="cauhoi_{{ch.Id}}" ng-model="answer" value="{{p.Id}}" class="form-check-input"
+                    ng-click="kiemtraPA(p.Id,ch.AnswerId, ch.Marks)">
+                <label for="answer" class="form-check-label">{{p.Text}}</label>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer text-muted">Điểm: {{diem}}</div>
+</div>
+<div class="col m-3 text-center">
+    <button type="button " class="btn btn-outline-dark" ng-click="dau()"><i
+            class="bi bi-arrow-return-left"></i></button>
+    <button type="button" class="btn btn-outline-dark" ng-click="tiep()"><i class="bi bi-arrow-right"></i></button>
+    <button type="button " class="btn btn-outline-dark" ng-click="lui()"><i class="bi bi-arrow-left"></i></button>
+    <button type="button" class="btn btn-outline-dark" ng-click="cuoi()"><i
+            class="bi bi-arrow-return-right"></i></button>
+</div>

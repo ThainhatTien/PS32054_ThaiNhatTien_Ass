@@ -1,0 +1,11 @@
+<div class="border border-info m-2 rounded">
+    <h1 class="m-2 fst-italic">Danh mục môn học</h1>
+    <div class="row row-cols-1 row-cols-md-3 m-3">
+        <div class="card text-center" ng-repeat="mh in cacmonhoc">
+            <div class="card-body m-2">
+                <a href=""><img src="images/logos/{{mh.Id}}.jpg" class="w-45 me-auto" alt=""></a>
+            </div>
+            <div class="card-footer text-body-secondary">{{mh.Name|uppercase}}</div>
+        </div>
+    </div>
+</div>

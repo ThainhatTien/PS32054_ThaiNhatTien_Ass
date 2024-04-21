@@ -1,0 +1,73 @@
+<div class="card text-start bg-primary-subtle m-2">
+    <div class="card-header fw-bold fs-4">
+        Đăng Ký
+    </div>
+    <div class="card-body">
+        <form class="fst-italic m-3" name="frmdk">
+            <div class="mb-3">
+                <label for="username" class="form-label">Tên đăng nhập</label>
+                <input type="text" class="form-control" id="username" required ng-minlength="3" name="username"
+                    ng-model="Student.username">
+                <em class="text-danger" ng-show="frmdk.username.$invalid">Tên đăng nhập lớn 3 ký tự</em>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Mật khẩu</label>
+                <input type="password" class="form-control" id="password" name="password" required
+                    ng-model="Student.password" ng-minlength="0">
+                <em class="text-danger" ng-show="frmdk.password.$invalid">Chưa nhập mật khẩu</em>
+            </div>
+            <div class="mb-3">
+                <label for="fullname" class="form-label">Họ và tên</label>
+                <input type="text" class="form-control" id="fullname" required ng-minlength="0" name="username"
+                    ng-model="Student.fullname">
+                <em class="text-danger" ng-show="frmdk.username.$invalid">Chưa nhập họ tên</em>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required ng-minlength="0" name="email"
+                    ng-model="Student.email">
+                <em class="text-danger" ng-show="frmdk.email.$invalid">Chưa email</em>
+            </div>
+            <div class="mb-3">
+                <label for="gender" class="form-label">Giới tính</label>
+                <div class="col mb-3">
+                    <select required ng-model="Student.gender" name="gender" id="gender" class="form-select">
+                        <option value="true" selected>Nam</option>
+                        <option value="false">Nữ</option>
+                    </select>
+                    <em class="text-danger" ng-show="frmdk.gender.$invalid">Chọn giới tính</em>
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Ngày sinh</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-calendar-day"></i></span>
+                        <input type="date" class="form-control" name="birthday" class="form-control" required
+                            ng-model="Student.birthday">
+
+                    </div><em class="text-danger" ng-show="frmdk.birthday.$invalid">Chưa nhập ngày sinh</em>
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Học phí</label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" name="schoolfee" ng-model="Student.schoolfee"
+                            ng-min="0" required>
+                        <span class="input-group-text">VNĐ</span>
+
+                    </div><em class="text-danger" ng-show="frmdk.schoolfee.$invalid">Học phí phải lớn hơn 0</em>
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Điểm</label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" ng-model="Student.marks" required ng-min="0"
+                            ng-max="10" name="marks">
+                        <span class="input-group-text">Đ</span>
+
+                    </div><em class="text-danger" ng-show="frmdk.marks.$invalid">Nhập điểm từ 0 đến 10</em>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="card-footer text-body-secondary">
+        <button type="submit" class="btn btn-primary m-2" ng-click="dangky()">Đăng Ký</button>
+    </div>
+</div>
